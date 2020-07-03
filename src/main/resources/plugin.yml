@@ -1,0 +1,11 @@
+name: FullSpawners
+version: ${project.version}
+main: me.kyler.fullspawners.FullSpawners
+api-version: 1.15
+authors: [Kyler]
+description: A powerful custom spawner plugin to make your server feel special.
+website: https://github.com/ItsPack/fullSpawners
+commands:
+  fullspawners:
+    description: FullSpawners command interface
+    aliases: [fullspawners, fullspawner, fs, fspawners, fspawner]
