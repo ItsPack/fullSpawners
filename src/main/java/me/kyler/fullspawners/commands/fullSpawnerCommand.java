@@ -34,13 +34,13 @@ public class fullSpawnerCommand implements CommandExecutor {
             Player pSender = (Player) sender;
             switch (args[0]) {
                 case "give":
-                    if (args.length == 4 || args.length == 5) {
+                    if (args.length == 3 || args.length == 4) {
                         Player pTarget = server.getPlayer(args[1]);
                         if (pTarget.isOnline()) {
                             if (config.getConfigurationSection("spawnerTypes").contains(args[2])) {
-                                ItemStack spawner = SkullCreator.withBase64(new ItemStack(Material.PLAYER_HEAD), config.getString("spawnerTypes." + args[2] + "base64"));
+                                ItemStack spawner = SkullCreator.withBase64(new ItemStack(Material.PLAYER_HEAD), config.getString("spawnerTypes." + args[2] + ".base64"));
                                 ItemMeta spawnerMeta = spawner.getItemMeta();
-                                spawnerMeta.setDisplayName(config.getString("spawnerTypes." + args[2] + "name"));
+                                spawnerMeta.setDisplayName(config.getString("spawnerTypes." + args[2] + ".name"));
                                 spawner.setItemMeta(spawnerMeta);
                                 pTarget.getInventory().addItem(spawner);
                             } else {

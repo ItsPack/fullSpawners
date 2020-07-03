@@ -23,13 +23,13 @@ public final class FullSpawners extends JavaPlugin {
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 
-        getCommand("fullspawners").setExecutor(new fullSpawnerCommand(getServer(), getConfig()));
-
         try {
             initiateFiles();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        getCommand("fullspawners").setExecutor(new fullSpawnerCommand(getServer(), getConfig()));
 
     }
 
