@@ -1,0 +1,7 @@
+messages:
+  giveCommand:
+    successSender: "You have given {player} {quantity}x {entity} spawners"
+    successRecipient: "You have received {quantity}x {entity} spawners"
+    errorPlayer: "{player} could not be found"
+    errorEntity: "{entity} is not a valid spawner entity"
+    commandUsage: "/fs give [player] [entity] {quantity}"
